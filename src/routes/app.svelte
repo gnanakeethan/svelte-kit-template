@@ -1,7 +1,2 @@
-
-<style global lang="postcss">
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-</style>
+<a href='/'>Go back</a>
 <p class="text-2xl">Appmaster</p>
