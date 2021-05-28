@@ -1,16 +1,17 @@
 {
   "name": "Svelte-1",
   "version": "0.0.1",
-  "type": "module",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
+    "amplify-pull": "jq 'del(.type)' <<< $(cat package.json) > package.json && amplify pull",
+    "amplify-push": "jq 'del(.type)' <<< $(cat package.json) > package.json && amplify push",
+    "dev": "jq '. + {\"type\":\"module\"}' <<< $(cat package.json) > package.json && svelte-kit dev",
+    "build": "jq '. + {\"type\":\"module\"}' <<< $(cat package.json) > package.json && svelte-kit build",
+    "preview": "jq '. + {\"type\":\"module\"}' <<< $(cat package.json) > package.json && svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.9",
+    "@sveltejs/adapter-static": "^1.0.0-next.11",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
@@ -23,14 +24,17 @@
     "postcss-load-config": "^3.0.1",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0",
+    "svelte": "^3.38.2",
     "svelte-preprocess": "^4.7.1",
     "tailwindcss": "^2.1.1",
-    "tslib": "^2.0.0",
+    "tslib": "^2.2.0",
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "@aws-amplify/api": "^4.0.1",
     "@tailwindcss/forms": "^0.3.2",
-    "@tailwindcss/typography": "^0.4.0"
-  }
+    "@tailwindcss/typography": "^0.4.0",
+    "aws-amplify": "^4.0.3"
+  },
+  "type": "module"
 }

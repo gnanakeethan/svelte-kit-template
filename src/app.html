@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" href="/favicon.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	%svelte.head%
 </head>
 <body>
 <div id="svelte">%svelte.body%</div>
+<!-- https://github.com/aws/aws-amplify/issues/678 fix: -->
+<script>
+    if (global === undefined) {
+        var global = window;
+    }
+</script>
+<!-- https://github.com/aws/aws-amplify/issues/678 fix end-->
 </body>
 </html>
