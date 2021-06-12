@@ -16,6 +16,11 @@ const config = {
         adapter: adapter({
             fallback: 'index.html'
         }),
+        files: {
+            assets: 'src/assets',
+            routes: 'src/routes',
+            template: 'src/app.html'
+        },
         // hydrate the <div id="svelte"> element in src/app.html
         target: '#svelte',
         vite: {
