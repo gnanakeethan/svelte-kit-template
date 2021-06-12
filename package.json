@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@aws-amplify/api": "^4.0.1",
+    "@sveltejs/adapter-node": "^1.0.0-next.25",
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/typography": "^0.4.0",
     "aws-amplify": "^4.0.3"

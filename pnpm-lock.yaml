@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@aws-amplify/api': ^4.0.1
+  '@sveltejs/adapter-node': ^1.0.0-next.25
   '@sveltejs/adapter-static': ^1.0.0-next.11
   '@sveltejs/kit': next
   '@tailwindcss/forms': ^0.3.2
@@ -26,6 +27,7 @@ specifiers:
 
 dependencies:
   '@aws-amplify/api': 4.0.2
+  '@sveltejs/adapter-node': 1.0.0-next.25
   '@tailwindcss/forms': 0.3.3_tailwindcss@2.1.4
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.1.4
   aws-amplify: 4.1.0
@@ -1467,6 +1469,12 @@ packages:
     resolution: {integrity: sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==}
     dev: false
 
+  /@sveltejs/adapter-node/1.0.0-next.25:
+    resolution: {integrity: sha512-6Kg3eJBKoug+XMW0AJlXD+etD3j5f5CJhLeUhZ8fM5b6Ds8nODoObozHcmkUoZUsI2i6sIcD37ctpPCNeTjsBg==}
+    dependencies:
+      esbuild: 0.12.8
+    dev: false
+
   /@sveltejs/adapter-static/1.0.0-next.13:
     resolution: {integrity: sha512-zaXJlWK9JfrjrE6nG5etB8kf4DSkbE3H8Ql6gmCk3WjdvpY85a60TMYBU9OK2iunkqpHnPYiMUGEnOGYmWlLYA==}
     dev: true
@@ -2278,7 +2286,6 @@ packages:
     resolution: {integrity: sha512-sx/LwlP/SWTGsd9G4RlOPrXnIihAJ2xwBUmzoqe2nWwbXORMQWtAGNJNYLBJJqa3e9PWvVzxdrtyFZJcr7D87g==}
     hasBin: true
     requiresBuild: true
-    dev: true
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
